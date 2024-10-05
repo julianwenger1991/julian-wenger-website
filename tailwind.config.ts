@@ -8,12 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        sans: ["var(--font-geist-sans)"],
+        // ... other font families if any
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui"), require("@tailwindcss/typography")],
+  daisyui: {
+    themes: ["autumn"],
+  },
 };
+
 export default config;
